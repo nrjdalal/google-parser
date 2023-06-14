@@ -48,13 +48,13 @@ export const googleSearch = async ({ query }) => {
 
   searchResults.forEach((result) => {
     const title = result.querySelector('h3').textContent
-    const link = result.querySelector('a').href
+    const url = result.querySelector('a').href
     const description = result.querySelector('.VwiC3b')
 
     if (title && link && description) {
       results.push({
         title,
-        link,
+        url,
         description: description.textContent,
       })
     }
