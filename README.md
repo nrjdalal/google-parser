@@ -72,6 +72,7 @@ Output:
 
 ```js
 {
+  code: 200,
   status: 'success',
   message: 'Found 5 results in 1s',
   data: {
@@ -83,6 +84,20 @@ Output:
         ...
       }
     ]
-  }
+  },
+  query: '@nrjdalal',
+}
+```
+
+Error:
+
+- This error is thrown when the request is blocked by Google. This can happen due to various reasons like too many requests, captcha, etc. using the same IP address.
+
+```js
+{
+  code: 429,
+  status: 'error',
+  message: 'Captcha or too many requests.',
+  query: '@nrjdalal'
 }
 ```
