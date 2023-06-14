@@ -33,7 +33,7 @@ export const googleSearch = async ({ query }) => {
   const response = await gotScraping({
     url: 'https://www.google.com/search',
     searchParams: {
-      q: query,
+      q: encodeURIComponent(query),
       num: 100,
     },
     headers,
