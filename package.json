@@ -9,16 +9,16 @@
     "release": "pnpm test && npx release-it"
   },
   "keywords": [
-    "search",
-    "google",
-    "google-this",
-    "google-search",
-    "google-scraper",
     "google-parser",
-    "search-results",
-    "web-scraping",
+    "google-scraper",
+    "google-search",
+    "google-this",
+    "google",
     "scraper",
+    "search-results",
+    "search",
     "serp",
+    "web-scraping",
     "@nrjdalal"
   ],
   "author": "",
