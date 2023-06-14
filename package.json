@@ -8,12 +8,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node test/browserInfo"
+    "test": "node test/browserInfo && node test/googleSearch",
+    "release": "pnpm test && npx release-it"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "got-scraping": "^3.2.13"
+    "got-scraping": "^3.2.13",
+    "jsdom": "^22.1.0"
   }
 }
