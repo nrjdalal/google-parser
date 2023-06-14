@@ -2,11 +2,34 @@
 
 Google parser is a lightweight yet powerful HTTP client based Google Search Result scraper/parser with the purpose of sending browser-like requests out of the box. This is very essential in the web scraping industry to blend in with the website traffic.
 
+## Questions
+
+> 1.  Does this work with serverless functions? Yes, this works with serverless functions like AWS Lambda. I haven't tested it with other serverless functions but it should work with them too.
+
+> 2. Are more features coming? Yes, I am working on adding more features like proxies, pagination, etc.
+
+> 3. I'm stuck, what should I do? You can create an issue on GitHub, pull requests are also welcome.
+
 ## Installation
+
+```bash
+pnpm install @nrjdalal/google-parser
+```
+
+<details>
+  <summary>yarn or npm</summary>
+
+<br/>
+
+```bash
+yarn install @nrjdalal/google-parser
+```
 
 ```bash
 npm install @nrjdalal/google-parser
 ```
+
+</details>
 
 ## Usage
 
