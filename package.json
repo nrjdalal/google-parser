@@ -2,13 +2,10 @@
   "name": "@nrjdalal/google-parser",
   "version": "1.0.2",
   "description": "",
-  "publishConfig": {
-    "access": "public"
-  },
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node test/browserInfo && node test/googleSearch",
+    "test": "node test/browserInfo && echo && node test/googleSearch",
     "release": "pnpm test && npx release-it"
   },
   "keywords": [],
@@ -17,5 +14,8 @@
   "dependencies": {
     "got-scraping": "^3.2.13",
     "jsdom": "^22.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

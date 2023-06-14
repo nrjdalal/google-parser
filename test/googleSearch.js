@@ -1,3 +1,3 @@
 import { googleSearch } from '../index.js'
 
-console.log('googleSearch:', await googleSearch({ query: 'apify' }))
+console.log('googleSearch:', await googleSearch({ query: '@nrjdalal' }))

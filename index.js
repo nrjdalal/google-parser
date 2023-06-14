@@ -1,9 +1,26 @@
 import { gotScraping } from 'got-scraping'
 import { JSDOM } from 'jsdom'
 
+const headers = {
+  Accept: '*/*',
+  'Accept-Encoding': 'gzip, deflate, br',
+  'Accept-Language': 'en-US,en;q=0.5',
+  'Alt-Used': 'www.google.com',
+  Connection: 'keep-alive',
+  Referer: 'https://www.google.com/',
+  'Sec-Fetch-Dest': 'empty',
+  'Sec-Fetch-Mode': 'cors',
+  'Sec-Fetch-Site': 'same-site',
+}
+
 export const browserInfo = async () => {
   const response = await gotScraping({
     url: 'https://api.apify.com/v2/browser-info',
+    headers,
+    headerGeneratorOptions: {
+      devices: ['desktop'],
+      locales: ['en-US'],
+    },
     responseType: 'json',
   })
 
@@ -19,6 +36,7 @@ export const googleSearch = async ({ query }) => {
       q: query,
       num: 100,
     },
+    headers,
     responseType: 'text',
   })
 
