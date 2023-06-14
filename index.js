@@ -40,6 +40,13 @@ export const googleSearch = async ({ query }) => {
     responseType: 'text',
   })
 
+  if (response.statusCode !== 200)
+    return {
+      code: response.statusCode,
+      status: 'error',
+      message: 'Captcha or too many requests.',
+    }
+
   const dom = new JSDOM(response.body)
 
   const searchResults = dom.window.document.querySelectorAll('.g')
@@ -61,6 +68,7 @@ export const googleSearch = async ({ query }) => {
   })
 
   return {
+    code: 200,
     status: 'success',
     message: `Found ${results.length} results in ${formatTime(
       (performance.now() - start) / 1000
