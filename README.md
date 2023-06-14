@@ -75,7 +75,6 @@ Output:
   status: 'success',
   message: 'Found 5 results in 1s',
   data: {
-    resultsLength: 5,
     results: [
       {
         title: 'Neeraj Dalal nrjdalal',
