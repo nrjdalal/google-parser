@@ -51,7 +51,7 @@ export const googleSearch = async ({ query }) => {
     const url = result.querySelector('a').href
     const description = result.querySelector('.VwiC3b')
 
-    if (title && link && description) {
+    if (title && url && description) {
       results.push({
         title,
         url,
