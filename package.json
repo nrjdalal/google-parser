@@ -1,0 +1,16 @@
+{
+  "name": "@nrjdalal/google-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/browserInfo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "got-scraping": "^3.2.13"
+  }
+}
