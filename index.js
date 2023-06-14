@@ -45,6 +45,7 @@ export const googleSearch = async ({ query }) => {
       code: response.statusCode,
       status: 'error',
       message: 'Captcha or too many requests.',
+      query,
     }
 
   const dom = new JSDOM(response.body)
@@ -74,6 +75,7 @@ export const googleSearch = async ({ query }) => {
       (performance.now() - start) / 1000
     )}`,
     data: { results },
+    query,
   }
 }
 
