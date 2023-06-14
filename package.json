@@ -8,7 +8,19 @@
     "test": "node test/browserInfo && echo && node test/googleSearch",
     "release": "pnpm test && npx release-it"
   },
-  "keywords": [],
+  "keywords": [
+    "search",
+    "google",
+    "google-this",
+    "google-search",
+    "google-scraper",
+    "google-parser",
+    "search-results",
+    "web-scraping",
+    "scraper",
+    "serp",
+    "@nrjdalal"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
