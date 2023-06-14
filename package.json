@@ -2,6 +2,9 @@
   "name": "@nrjdalal/google-parser",
   "version": "1.0.0",
   "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "type": "module",
   "scripts": {
