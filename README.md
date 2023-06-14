@@ -1,6 +1,6 @@
-# Google Parser
+# [Google Parser](https://www.npmjs.com/package/@nrjdalal/google-parser)
 
-Google parser is a lightweight yet powerful Google Search Result scraper/parser with the purpose of sending browser-like requests out of the box. This is very essential in the web scraping industry to blend in with the website traffic.
+Google parser is a lightweight yet powerful HTTP client based Google Search Result scraper/parser with the purpose of sending browser-like requests out of the box. This is very essential in the web scraping industry to blend in with the website traffic.
 
 ## Installation
 
