@@ -8,6 +8,15 @@
     "test": "node test/browserInfo && echo && node test/googleSearch",
     "release": "pnpm test && npx release-it"
   },
+  "author": "@nrjdalal",
+  "license": "ISC",
+  "dependencies": {
+    "got-scraping": "^3.2.13",
+    "jsdom": "^22.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "google-parser",
     "google-scraper",
@@ -20,14 +29,5 @@
     "serp",
     "web-scraping",
     "@nrjdalal"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "got-scraping": "^3.2.13",
-    "jsdom": "^22.1.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+  ]
 }
