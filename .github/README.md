@@ -88,6 +88,7 @@ Usage:
 import { googleSearch } from '@nrjdalal/google-parser'
 
 const response = await googleSearch({ query: 'nrjdalal' })
+console.log(response)
 ```
 
 Output:
@@ -107,7 +108,7 @@ Output:
       }
     ]
   },
-  query: '@nrjdalal',
+  query: 'nrjdalal',
 }
 ```
 
@@ -120,7 +121,7 @@ Error:
   code: 429,
   status: 'error',
   message: 'Captcha or too many requests.',
-  query: '@nrjdalal'
+  query: 'nrjdalal'
 }
 ```
 
