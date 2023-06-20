@@ -18,7 +18,7 @@ Google parser is a lightweight yet powerful HTTP client based Google Search Resu
 ## Installation
 
 ```bash
-pnpm install @nrjdalal/google-parser
+pnpm add @nrjdalal/google-parser
 ```
 
 <details>
@@ -27,7 +27,7 @@ pnpm install @nrjdalal/google-parser
 <br/>
 
 ```bash
-yarn install @nrjdalal/google-parser
+yarn add @nrjdalal/google-parser
 ```
 
 ```bash
