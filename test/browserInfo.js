@@ -4,8 +4,3 @@ console.log(
   'browserInfo:',
   await browserInfo({ options: { headers: getHeaders() } })
 )
-
-console.log(
-  'browserInfo:',
-  await browserInfo({ options: { headers: getHeaders() } })
-)
