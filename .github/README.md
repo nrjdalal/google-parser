@@ -10,6 +10,11 @@ Google parser is a lightweight yet powerful HTTP client based Google Search Resu
 
 > 3. I'm stuck, what should I do? You can create an issue on GitHub, pull requests are also welcome.
 
+## Features
+
+- Proxy support ✅︎
+- Custom Headers support ✅︎
+
 ## Installation
 
 ```bash
