@@ -1,3 +1,11 @@
-import { browserInfo } from '../index.js'
+import { browserInfo, getHeaders } from '../index.js'
 
-console.log('browserInfo:', await browserInfo())
+console.log(
+  'browserInfo:',
+  await browserInfo({ options: { headers: getHeaders() } })
+)
+
+console.log(
+  'browserInfo:',
+  await browserInfo({ options: { headers: getHeaders() } })
+)

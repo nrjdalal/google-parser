@@ -1,36 +1,39 @@
-import { gotScraping } from 'got-scraping'
+import { got } from 'got'
 import { JSDOM } from 'jsdom'
 
-const headers = {
-  Accept: '*/*',
-  'Accept-Encoding': 'gzip, deflate, br',
-  'Accept-Language': 'en-US,en;q=0.5',
-  'Alt-Used': 'www.google.com',
-  Connection: 'keep-alive',
-  Referer: 'https://www.google.com/',
-  'Sec-Fetch-Dest': 'empty',
-  'Sec-Fetch-Mode': 'cors',
-  'Sec-Fetch-Site': 'same-site',
+import { HeaderGenerator } from 'header-generator'
+
+export const getHeaders = () => {
+  const header = new HeaderGenerator().getHeaders({
+    browsers: ['chrome'],
+    devices: ['desktop'],
+    operatingSystems: ['windows'],
+  })
+
+  return {
+    'sec-ch-ua-mobile': header['sec-ch-ua-mobile'],
+    'sec-ch-ua-platform': header['sec-ch-ua-platform'],
+    'sec-ch-ua': header['sec-ch-ua'],
+    'user-agent': header['user-agent'],
+  }
 }
 
-export const browserInfo = async () => {
-  const response = await gotScraping({
-    url: 'https://api.apify.com/v2/browser-info',
+export const browserInfo = async ({ options }) => {
+  const headers = options?.headers || getHeaders()
+
+  const response = await got('https://api.apify.com/v2/browser-info', {
     headers,
-    headerGeneratorOptions: {
-      devices: ['desktop'],
-      locales: ['en-US'],
-    },
     responseType: 'json',
   })
 
   return response.body
 }
 
-export const googleSearch = async ({ query }) => {
+export const googleSearch = async ({ query, options }) => {
   const start = performance.now()
+  const headers = options?.headers || getHeaders()
 
-  const response = await gotScraping({
+  const response = await got({
     url: 'https://www.google.com/search',
     searchParams: {
       q: encodeURIComponent(query),
@@ -55,14 +58,14 @@ export const googleSearch = async ({ query }) => {
   const results = []
 
   searchResults.forEach((result) => {
-    const title = result.querySelector('h3').textContent
-    const url = result.querySelector('a').href
+    const title = result.querySelector('h3')
+    const url = result.querySelector('a')
     const description = result.querySelector('.VwiC3b')
 
     if (title && url && description) {
       results.push({
-        title,
-        url,
+        title: title.textContent,
+        url: url.href,
         description: description.textContent,
       })
     }

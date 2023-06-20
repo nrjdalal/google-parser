@@ -9,9 +9,11 @@
     "release": "pnpm test && npx release-it"
   },
   "author": "@nrjdalal",
+  "homepage": "https://github.com/nrjdalal/google-parser",
   "license": "ISC",
   "dependencies": {
-    "got-scraping": "^3.2.13",
+    "got": "^13.0.0",
+    "header-generator": "latest",
     "jsdom": "^22.1.0"
   },
   "publishConfig": {
