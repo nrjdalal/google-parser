@@ -52,6 +52,7 @@ export const googleSearch = async ({ query, options }) => {
       status: 'error',
       message: 'Captcha or too many requests.',
       query,
+      body: response.body,
     }
 
   const dom = new JSDOM(response.body)
