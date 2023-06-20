@@ -1,4 +1,4 @@
-import { got } from 'got'
+import { got } from 'got-scraping'
 import { JSDOM } from 'jsdom'
 
 import { HeaderGenerator } from 'header-generator'

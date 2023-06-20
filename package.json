@@ -13,7 +13,7 @@
   "repository": "nrjdalal/google-parser",
   "homepage": "https://github.com/nrjdalal/google-parser",
   "dependencies": {
-    "got": "^13.0.0",
+    "got-scraping": "^3.2.13",
     "header-generator": "latest",
     "jsdom": "^22.1.0"
   },
