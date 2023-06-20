@@ -8,9 +8,10 @@
     "test": "node test/browserInfo && echo && node test/googleSearch",
     "release": "pnpm test && npx release-it"
   },
-  "author": "@nrjdalal",
+  "license": "MIT",
+  "author": "nrjdalal",
+  "repository": "nrjdalal/google-parser",
   "homepage": "https://github.com/nrjdalal/google-parser",
-  "license": "ISC",
   "dependencies": {
     "got": "^13.0.0",
     "header-generator": "latest",
