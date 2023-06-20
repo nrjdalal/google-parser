@@ -54,7 +54,6 @@ Response:
   countryCode: 'US',
   bodyLength: 0,
   headers: {
-    // IP address of the client
     'x-forwarded-for': '182.69.180.111',
     'x-forwarded-proto': 'https',
     'x-forwarded-port': '443',
@@ -88,7 +87,7 @@ Usage:
 ```js
 import { googleSearch } from '@nrjdalal/google-parser'
 
-const response = await googleSearch({ query: '@nrjdalal' })
+const response = await googleSearch({ query: 'nrjdalal' })
 ```
 
 Output:
@@ -123,4 +122,19 @@ Error:
   message: 'Captcha or too many requests.',
   query: '@nrjdalal'
 }
+```
+
+### 3. Google Search with Same Headers
+
+> Why? It is not recommended to change headers for every request as it can lead to detection. So, it is recommended to use the same headers for every request for a single IP.
+
+Usage:
+
+```js
+import { getHeaders, googleSearch } from '@nrjdalal/google-parser'
+
+const headers = getHeaders()
+
+console.log(await googleSearch({ query: 'apple', options: { headers } }))
+console.log(await googleSearch({ query: 'microsoft', options: { headers } }))
 ```

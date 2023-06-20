@@ -31,5 +31,8 @@
     "serp",
     "web-scraping",
     "@nrjdalal"
-  ]
+  ],
+  "devDependencies": {
+    "@nrjdalal/google-parser": "^1.2.0"
+  }
 }
