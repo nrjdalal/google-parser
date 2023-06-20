@@ -80,8 +80,8 @@ export const googleSearch = async ({ query, options }) => {
     message: `Found ${results.length} results in ${formatTime(
       (performance.now() - start) / 1000
     )}`,
-    data: { results },
     query,
+    data: { results },
   }
 }
 

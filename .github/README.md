@@ -103,6 +103,7 @@ Output:
   code: 200,
   status: 'success',
   message: 'Found 5 results in 1s',
+  query: 'nrjdalal',
   data: {
     results: [
       {
@@ -113,7 +114,7 @@ Output:
       }
     ]
   },
-  query: 'nrjdalal',
+
 }
 ```
 
