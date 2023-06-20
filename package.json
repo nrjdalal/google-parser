@@ -9,9 +9,18 @@
     "release": "pnpm test && npx release-it"
   },
   "license": "MIT",
-  "author": "nrjdalal",
-  "repository": "nrjdalal/google-parser",
-  "homepage": "https://github.com/nrjdalal/google-parser",
+  "author": {
+    "name": "Neeraj Dalal",
+    "email": "admin@nrjdalal.com",
+    "url": "https://github.com/nrjdalal"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrjdalal/google-parser"
+  },
+  "bugs": {
+    "url": "https://github.com/nrjdalal/google-parser/issues"
+  },
   "dependencies": {
     "got-scraping": "^3.2.13",
     "header-generator": "latest",
