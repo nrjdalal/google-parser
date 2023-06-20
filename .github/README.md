@@ -136,6 +136,23 @@ import { getHeaders, googleSearch } from '@nrjdalal/google-parser'
 
 const headers = getHeaders()
 
+// same headers for same IP
+console.log(await googleSearch({ query: 'facebook', options: { headers } }))
 console.log(await googleSearch({ query: 'apple', options: { headers } }))
-console.log(await googleSearch({ query: 'microsoft', options: { headers } }))
+
+// regeneration of headers for new IP
+console.log(
+  await googleSearch({ query: 'netflix', options: { headers: getHeaders() } })
+)
+
+// proxy can also be used as proxyUrl
+console.log(
+  await googleSearch({
+    query: 'microsoft',
+    options: {
+      headers: getHeaders(),
+      proxyUrl: 'http://username:password@host:port',
+    },
+  })
+)
 ```

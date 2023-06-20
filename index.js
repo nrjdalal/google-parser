@@ -1,4 +1,4 @@
-import { got } from 'got-scraping'
+import { gotScraping as got } from 'got-scraping'
 import { JSDOM } from 'jsdom'
 
 import { HeaderGenerator } from 'header-generator'
@@ -11,6 +11,7 @@ export const getHeaders = () => {
   })
 
   return {
+    accept: '*/*',
     'sec-ch-ua-mobile': header['sec-ch-ua-mobile'],
     'sec-ch-ua-platform': header['sec-ch-ua-platform'],
     'sec-ch-ua': header['sec-ch-ua'],
@@ -23,6 +24,7 @@ export const browserInfo = async ({ options }) => {
 
   const response = await got('https://api.apify.com/v2/browser-info', {
     headers,
+    ...options,
     responseType: 'json',
   })
 
@@ -40,6 +42,7 @@ export const googleSearch = async ({ query, options }) => {
       num: 100,
     },
     headers,
+    ...options,
     responseType: 'text',
   })
 
