@@ -93,7 +93,6 @@ Usage:
 import { googleSearch } from '@nrjdalal/google-parser'
 
 const response = await googleSearch({ query: 'nrjdalal' })
-console.log(response)
 ```
 
 Output:
@@ -149,17 +148,6 @@ console.log(await googleSearch({ query: 'apple', options: { headers } }))
 // regeneration of headers for new IP
 console.log(
   await googleSearch({ query: 'netflix', options: { headers: getHeaders() } })
-)
-
-// proxy can also be used as proxyUrl
-console.log(
-  await googleSearch({
-    query: 'microsoft',
-    options: {
-      headers: getHeaders(),
-      proxyUrl: 'http://username:password@host:port',
-    },
-  })
 )
 ```
 
