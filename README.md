@@ -145,7 +145,7 @@ const headers = getHeaders()
 console.log(await googleSearch({ query: 'facebook', options: { headers } }))
 console.log(await googleSearch({ query: 'apple', options: { headers } }))
 
-// regeneration of headers for new IP
+// regeneration of headers for new IP if needed
 console.log(
   await googleSearch({ query: 'netflix', options: { headers: getHeaders() } })
 )
