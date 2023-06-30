@@ -36,6 +36,8 @@ export const googleSearch = async ({ query, options }) => {
   const headers = options?.headers || getHeaders()
   const sendHtml = options?.html || 'false'
 
+  delete options.html
+
   const response = await got({
     url: 'https://www.google.com/search',
     searchParams: {
