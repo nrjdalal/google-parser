@@ -34,6 +34,7 @@ export const browserInfo = async ({ options }) => {
 export const googleSearch = async ({ query, options }) => {
   const start = performance.now()
   const headers = options?.headers || getHeaders()
+  const sendHtml = options?.html || 'false'
 
   const response = await got({
     url: 'https://www.google.com/search',
@@ -45,6 +46,16 @@ export const googleSearch = async ({ query, options }) => {
     ...options,
     responseType: 'text',
   })
+
+  if (sendHtml === 'true') {
+    return {
+      code: 200,
+      status: 'success',
+      message: 'HTML response',
+      query,
+      body: response.body,
+    }
+  }
 
   if (response.statusCode !== 200)
     return {
