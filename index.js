@@ -41,7 +41,7 @@ export const googleSearch = async ({ query, options }) => {
   const response = await got({
     url: 'https://www.google.com/search',
     searchParams: {
-      q: encodeURIComponent(query),
+      q: query,
       num: 100,
     },
     headers,
