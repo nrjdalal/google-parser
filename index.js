@@ -69,6 +69,21 @@ export const googleSearch = async ({ query, options }) => {
     };
 
   const dom = new JSDOM(response.body);
+  const document = dom.window.document;
+
+  const snippet = {
+    title:
+      document.querySelector(".co8aDb")?.textContent ||
+      document.querySelector(".LC20lb")?.textContent,
+    paragraph: document.querySelector(".hgKElc")?.textContent.trim(),
+    list: document
+      .querySelector(".i8Z77e")
+      ?.innerHTML.split("</li>")
+      .map((item) => item.slice(item.indexOf(">") + 1))
+      .join("\n"),
+  };
+
+  console.log(snippet, "index-a13f15");
 
   const searchResults = dom.window.document.querySelectorAll(".g");
 
@@ -95,7 +110,7 @@ export const googleSearch = async ({ query, options }) => {
       (performance.now() - start) / 1000
     )}`,
     query,
-    data: { results },
+    data: { snippet, results },
   };
 };
 

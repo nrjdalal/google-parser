@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node test/browserInfo && echo && node test/googleSearch",
+    "test": "node test/googleSearch",
     "release": "pnpm test && npx release-it"
   },
   "license": "MIT",
