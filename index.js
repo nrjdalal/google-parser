@@ -98,7 +98,16 @@ export const googleSearch = async ({ query, options }) => {
       document
         .querySelector(".i8Z77e")
         ?.innerHTML.split("</li>")
+        .filter((item) => item !== "")
         .map((item) => item.slice(item.indexOf(">") + 1))
+        .join("\n") ||
+      document
+        .querySelector(".X5LH0c")
+        ?.innerHTML.split("</li>")
+        .filter((item) => item !== "")
+        .map(
+          (item, index) => index + 1 + ". " + item.slice(item.indexOf(">") + 1)
+        )
         .join("\n"),
   };
 
