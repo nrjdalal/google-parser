@@ -22,7 +22,7 @@
     "url": "https://github.com/nrjdalal/google-parser/issues"
   },
   "dependencies": {
-    "got-scraping": "^3.2.13",
+    "got-scraping": "^4.0.0",
     "header-generator": "latest",
     "jsdom": "^22.1.0"
   },
